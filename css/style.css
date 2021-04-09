@@ -1,0 +1,21 @@
+*{margin: 0;padding: 0;box-sizing: border-box;font-family: cursive;}
+body{display: flex;justify-content: center;align-items: center;min-height: 100vh;background-color: rgb(0, 0, 0);}
+.container{position: relative;display: flex;justify-content: center;align-items: center;padding: 40px 0; flex-wrap: wrap;}
+.container .box{position: relative;width: 320px;height: 400px;background-color: black;color: white;display: flex;justify-content: center;align-items: center;margin: 20px 30px;transition: 0.5s;}
+.container .box:hover{transform: translateY(-40px);}
+.container .box::before{content: " ";position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: linear-gradient(236deg, rgb(247, 39, 91) 4%, rgb(168, 244, 80) 96%);}
+.container .box::after{content: " ";position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: linear-gradient(236deg, rgba(194,11,184,1) 0%, rgba(80,244,88,1) 96%);filter: blur(30px);}
+.container .box:nth-child(2)::before,.container .box:nth-child(2):after{background: linear-gradient(333deg, rgba(159,255,0,1) 0%, rgba(244,80,80,1) 100%);}
+.container .box:nth-child(3)::before,.container .box:nth-child(3):after{background: linear-gradient(333deg, rgb(68, 250, 174) 30%, rgb(171, 135, 255) 70%);}
+.container .box span{position: absolute;top: 10px;bottom: 10px;left: 10px;right: 10px;background-color: rgba(0, 0, 0, 0.644);z-index: 1;}
+.container .box span::before{content: " ";position: absolute;top: 0;left: 0;width: 50%;height: 100%;background-color: rgba(255, 255, 255, 0.1);pointer-events: none;}
+.content{position: relative;z-index: 3;padding: 40px 30px;}
+.content h2{font-size: 35px;line-height: 2.1em;}
+.content p{line-height: 1.4em;}
+.content a{line-height: 5em; text-decoration: none;padding: 10px; background-color: rgba(0, 0, 0, 0.5);color: white;border-radius: 20px;transition: 0.5s;}
+.content a:hover{background-color: rgba(255, 255, 255, 0.5);color: black;}
+
+
+
+@media only screen and (max-width: 326px) {.container .box{width: 300px;}}
+@media only screen and (max-width: 280px) {.container .box{width: 280px;}}
